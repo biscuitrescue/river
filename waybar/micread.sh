@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 mic(){
-	mic=`pamixer --source 46 --get-volume-human`
+	inp=`pamixer --list-sources | awk '/alsa_input/ {printf $1}'`
+	mic=`pamixer --source $inp --get-volume-human`
 	echo  $mic
 }
 

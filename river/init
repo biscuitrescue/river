@@ -9,11 +9,11 @@ riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DI
 riverctl input "1267:12608:MSFT0001:00_04F3:3140_Touchpad" natural-scroll enabled
 riverctl input "1267:12608:MSFT0001:00_04F3:3140_Touchpad" tapping enabled
 # Open alacritty
-riverctl map normal $mod Return spawn "alacritty"
+riverctl map normal $mod Return spawn "kitty"
 
 # Open rofi
 riverctl map normal $mod D spawn "wofi --show drun"
-riverctl map normal $mod R spawn "wofi --show run"
+riverctl map normal $mod R spawn "bemenu-run -i -H 30 --fn 'Space mono for powerline 11' --nb '#2e3440' --nf '#ffffff' --hb '#aaeedd' --hf '#000000' --sb '#aaeedd' --sf '#000000' -p 'RUN:' --tb '#aaeedd' --tf '#000000' --fb '#2e3440' --ff '#aaeedd'"
 riverctl map normal $mod E spawn "emacs"
 
 # Open pcmanfm
@@ -134,7 +134,7 @@ do
     riverctl map $mode None XF86AudioLowerVolume  spawn 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
     riverctl map $mode None XF86AudioMute         spawn 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
     riverctl map $mode None XF86AudioMicMute      spawn 'pactl set-source-mute 0 toggle'
-    riverctl map $mode XF86AudioMicMute      spawn 'pactl set-source-volume 0 +5%'
+    riverctl map $mode XF86AudioMicMute           spawn 'pactl set-source-volume 0 +5%'
     # Control screen brightness (using backlight_control)
     riverctl map $mode None XF86MonBrightnessUp   spawn 'light -A 5'
     riverctl map $mode None XF86MonBrightnessDown spawn 'light -U 5'

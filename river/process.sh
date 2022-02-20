@@ -1,4 +1,4 @@
-swaybg -i ~/Pictures/Wallpapers/mania.jpg -m fill &
+swaybg -i ~/Pictures/Wallpapers/anime.jpg -m fill &
 
 /usr/bin/emacs --daemon &
 killall dunst
@@ -10,7 +10,7 @@ xfce-polkit &
 killall nm-applet
 nm-applet --indicator &
 killall xss-lock
-xss-lock --transfer-sleep-lock -- waylock --nofork
+xss-lock --transfer-sleep-lock -- wayblur --nofork
 
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile &
