@@ -1,0 +1,85 @@
+configuration {
+	modi:					"drun";
+	display-drun: 			"Apps";
+	drun-display-format:    "{name}";
+	font:				    "UbuntuMono Nerd Font 11";
+	show-icons:              true;
+	icon-theme: 			"Papirus";
+}
+
+@theme "/dev/null"
+
+* {
+	bg:				#1e1e2e;
+	fg:				#D9E0EE;
+	accent:			#1e1e2e;
+    active:      	#303446;
+	rad:			25px;
+
+	background-color: @bg;
+	text-color:	@fg;
+}
+
+window {
+	transparency: "real";
+	height: 80%;
+    width: 20%;
+	location: east;
+	x-offset: -0.5%;
+	y-offset: 0%;
+}
+
+inputbar {
+	children: [ textbox, entry ];
+	expand: false;
+	margin: 20px;
+	border-radius: @rad;
+	background-color: @active;
+}
+
+textbox {
+    str: "";
+    expand: false;
+    padding: 0 1% 0;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    border-radius: @rad;
+    background-color: @accent;
+    text-color: @fg;
+    font: "Material Icons 17";
+}
+
+entry{
+	expand: true;
+	padding: 2%;
+    placeholder: "Search";
+	border-radius: @rad;
+    background-color: @active;
+}
+
+listview {
+	columns: 2;
+	lines: 2;
+	cycle: false;
+    margin: 20px;
+}
+
+element {
+	orientation: vertical;
+	padding: 0.5em;
+}
+
+element-text, element-icon {
+	padding: 0.2em;
+	horizontal-align: 0.5;
+	background-color: inherit;
+}
+
+element-icon { size: 48px; }
+listview, element, element selected, element-text, element-icon { cursor: pointer; }
+
+element selected {
+	background-color: @active;
+	text-color: @fg;
+	border-radius: @rad;
+}

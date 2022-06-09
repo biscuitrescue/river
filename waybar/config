@@ -1,0 +1,131 @@
+{
+	"layer": "top",
+	"modules-left": ["river/tags","sway/workspaces","sway/mode"],
+	"modules-center": [],
+	// add network module if you want
+	"modules-right": [ "tray", "custom/cpu","custom/mem", "custom/swap","backlight","pulseaudio", "custom/mic","custom/clock","custom/time","battery",],
+	
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": " {volume}%",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"scroll-step": 5,
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"sway/workspaces": {
+        "format": "{icon}",
+        "disable-scroll": false, 
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+ //           "urgent": "",
+ //           "focused": "",
+ //           "default": ""
+        },
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "river/tags": {
+        "tag-labels":[
+            "I",
+            "II",
+            "III",
+            "IV",
+            "V",
+            "VI",
+            "VII",
+            "VIII",
+            "IX",
+		],
+		"disable-click": false
+    },
+	"network": {
+		"tooltip": false,
+		//"format-wifi": "  {essid} {ipaddr}",
+		//"format-ethernet": " {ipaddr}"
+		"format-wifi": "  {essid}",
+		"format-ethernet": ""
+	},
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1
+	},
+    "battery": {
+        "states": {
+            "good": 100,
+            "critical": 30
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [" ", " ", " ", " ", " "],
+		"interval":1
+    },
+	"tray":{
+		"icon-size":18,
+		"show-passive-items":true,
+		"spacing": 10
+	},
+    "custom/clock": {
+        "interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/datetime.sh",
+        "tooltip": false
+    },
+	"cpu": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1
+	},
+	"custom/cpu": {
+		"interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/cpu.sh",
+        "tooltip": false
+	},
+	"custom/mem": {
+		"interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/mem.sh",
+        "tooltip": false
+	},
+	"custom/swap": {
+		"interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/swap.sh",
+        "tooltip": false
+	},
+    "custom/mic": {
+        "interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/micread.sh",
+        "tooltip": false
+    },
+    "custom/time": {
+        "interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/time.sh",
+        "tooltip": false
+    },
+}
+

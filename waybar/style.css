@@ -1,0 +1,224 @@
+* {
+	/* padding: 0; */
+	border: none;
+	margin-top: 1px;
+	padding-top: 1;
+	padding-bottom: 1;
+	margin-bottom: 2px;
+	border-radius: 0;
+    font-family: "operatormono nerd font" ;
+	font-size: 16px;
+	min-height: 0px;
+}
+
+window#waybar {
+	background: #1e1e2e;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+    color: transparent;
+	background: transparent;
+}
+#tags {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 10px;
+	font-size: 4px;
+	padding: 0;
+	border-radius: 15px;
+	/* background: #1b1c26; */
+	background: #24273A;
+	transition: none;
+}
+
+#tags button {
+	transition: none;
+	padding: 1;
+	margin: 4;
+	color: #1e1e3e;
+	background: #C9CBFF;
+	font-size: 16px;
+	border-radius: 13px;
+}
+
+#tags button.occupied {
+	transition: none;
+	background: #FAE3B0;
+	color: #1e1e2e;
+	font-size: 4px;
+}
+
+#tags button.focused {
+	color: #1e1e2e;
+	background: #F28FAD;
+}
+
+#tags button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+    color: #1e1e2e;
+	background: #abe9b3;
+	border-radius: 13;
+}
+
+#tags button.focused:hover {
+    color: #1e1e2e;
+}
+
+#pulseaudio {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #b5e8e0;
+}
+
+#battery {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-right: 12px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #89DCEB;
+}
+
+#battery.charging, #battery.plugged {
+	color: #1e1e2e;
+    background-color: #abe9b3;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #D8DEE9;
+    color: #1e1e2e;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ff6e6e;
+        color: #D8DEE9;
+    }
+}
+
+#backlight {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #F98DA6;
+}
+#custom-clock {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #d6acff;
+}
+
+#custom-swap{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #fae3b0;
+}
+#custom-mem {
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #f5c2e7;
+}
+#custom-time{
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	color: #1e1e2e;
+	background: #fae3b0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#custom-mic{
+	margin-left: 8px;
+	color: #1e1e2e;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	padding-top: 0;
+	padding-bottom: 0;
+	background: #f7768e;
+}
+#cpu {
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	background: #9ED9CC;
+	color: #1e1e2e;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#custom-cpu {
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	transition: none;
+	padding-top: 0;
+	padding-bottom: 0;
+	color: #1e1e2e;
+	background: #9ED9CC;
+}
+
+#tray {
+	margin-left: 8px;
+	/* padding-left: 15px; */
+	padding-right: 15px;
+	border-radius: 15px;
+	transition: none;
+	color: #D8DEE9;
+	background: #1e1e2e;
+	padding-top: 0;
+	padding-bottom: 0;
+}
