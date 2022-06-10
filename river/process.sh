@@ -1,14 +1,14 @@
 swaybg -i ~/Pictures/Wallpapers/ign_farFromTomorrow.png -m fill &
 
-killall dunst
+killall dunst &
 dunst &
-killall waybar
+pkill waybar
 waybar &
 killall xfce-polkit
 xfce-polkit &
 killall nm-applet
 nm-applet --indicator &
-killall xss-lock
+killall xss-lock &
 xss-lock --transfer-sleep-lock -- wayblur --nofork
 
 # River will send the process group of the init executable SIGTERM on exit.

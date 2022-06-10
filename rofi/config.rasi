@@ -22,9 +22,9 @@ configuration {
 
 window {
 	transparency: "real";
-	height: 80%;
-    width: 20%;
-	location: east;
+	height: 40%;
+    width: 40%;
+	location: center;
 	x-offset: -0.5%;
 	y-offset: 0%;
 }
@@ -58,7 +58,7 @@ entry{
 }
 
 listview {
-	columns: 2;
+	columns: 4;
 	lines: 2;
 	cycle: false;
     margin: 20px;

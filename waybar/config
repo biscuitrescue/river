@@ -1,22 +1,28 @@
 {
 	"layer": "top",
-	"modules-left": ["river/tags","sway/workspaces","sway/mode"],
+	"modules-left": ["wlr/workspaces", "river/tags", "sway/workspaces", "sway/mode"],
 	"modules-center": [],
-	// add network module if you want
-	"modules-right": [ "tray", "custom/cpu","custom/mem", "custom/swap","backlight","pulseaudio", "custom/mic","custom/clock","custom/time","battery",],
+	"modules-right": [ "tray", "custom/cpu","custom/mem", "custom/swap","backlight","pulseaudio", "custom/mic","custom/clock","custom/time","upower",],
 	
-	"pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-		"format": "{icon} {volume}%",
-		"format-muted": " {volume}%",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"scroll-step": 5,
-		"format-icons": {
-			"default": ["", "", ""]
-		}
-	},
-	"sway/workspaces": {
+    "wlr/workspaces": {
+    "all-outputs": "true",
+    "format": "{name}",
+    "sort-by-false": "false",
+    "sort-by-coordinates": "false",
+    "on-click": "activate",
+    //"format-icons": {
+    //"1",
+    //"2",
+    //"3",
+    //"4",
+    //"5",
+    //"urgent": "",
+    //"active": "",
+    //"default": ""
+    //}
+},
+
+    "sway/workspaces": {
         "format": "{icon}",
         "disable-scroll": false, 
         "format-icons": {
@@ -43,6 +49,32 @@
         "max-length": 80,
         "tooltip": false
     },
+    "upower": {
+     "icon-size": 20,
+     "hide-if-empty": true,
+     "tooltip": true,
+     "tooltip-spacing": 20
+},
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "icon-theme": "Star",
+        "tooltip-format": "{title}",
+        "on-click": "minimize",
+        "on-click-middle": "close",
+        "on-click-right": "activate"
+    },
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": " {volume}%",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"scroll-step": 5,
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
     "river/tags": {
         "tag-labels":[
             "I",

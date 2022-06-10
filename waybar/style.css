@@ -2,8 +2,8 @@
 	/* padding: 0; */
 	border: none;
 	margin-top: 1px;
-	padding-top: 1;
-	padding-bottom: 1;
+	padding-top: 0;
+	padding-bottom: 0;
 	margin-bottom: 2px;
 	border-radius: 0;
     font-family: "operatormono nerd font" ;
@@ -20,14 +20,17 @@ window#waybar.hidden {
 }
 
 #window {
+	padding-top: 10;
+	padding-bottom: 10;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
 	transition: none;
     color: transparent;
 	background: transparent;
 }
-#tags {
+
+#mode,
+#workspaces {
 	padding-top: 0;
 	padding-bottom: 0;
 	margin-left: 10px;
@@ -38,12 +41,58 @@ window#waybar.hidden {
 	background: #24273A;
 	transition: none;
 }
+#workspaces button {
+	transition: none;
+	padding-left: 10;
+	padding-right: 10;
+	margin: 4;
+	color: #1e1e3e;
+	background: #C9CBFF;
+	font-size: 16px;
+	border-radius: 13px;
+}
+#workspaces button.active {
+	color: #1e1e2e;
+	background: #F28FAD;
+	padding-left: 10;
+	padding-right: 10;
+}
+#workspaces button.visible{
+	transition: none;
+	background: #FAE3B0;
+	color: #1e1e2e;
+	font-size: 4px;
+}
+#workspaces button.urgent{
+	transition: none;
+	background: #FAE3B0;
+	color: #1e1e2e;
+	font-size: 4px;
+}
+#workspaces button.hidden{
+	transition: none;
+	background: #FAE3B0;
+	color: #1e1e2e;
+	font-size: 4px;
+}
+
+
+#tags {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 10px;
+	font-size: 4px;
+	padding: 0;
+	border-radius: 15px;
+	background: #1e1e2e;
+	transition: none;
+}
 
 #tags button {
 	transition: none;
 	padding: 1;
 	margin: 4;
-	color: #1e1e3e;
+	color: #1e1e2e;
 	background: #C9CBFF;
 	font-size: 16px;
 	border-radius: 13px;
@@ -79,18 +128,38 @@ window#waybar.hidden {
 	padding-bottom: 0;
 	margin-left: 8px;
 	padding-left: 10px;
+	margin-top: 4;
+	margin-bottom: 4;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
 	color: #1e1e2e;
 	background: #b5e8e0;
 }
 
+#upower {
+	background: #89DCEB;
+	color: #1e1e2e;
+	margin-right: 12px;
+	margin-left: 8px;
+	border-radius: 13px;
+	margin-top: 4;
+	margin-bottom: 4;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 10;
+	padding-right: 10;
+}
+#upower.charging {
+	background: #abe9b3;
+}
 #battery {
 	padding-top: 0;
 	padding-bottom: 0;
 	margin-right: 12px;
 	margin-left: 8px;
+	margin-top: 4;
+	margin-bottom: 4;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 15px;
@@ -127,7 +196,9 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
+	margin-top: 4;
+	margin-bottom: 4;
+	border-radius: 13px;
 	transition: none;
 	color: #1e1e2e;
 	background: #F98DA6;
@@ -135,10 +206,12 @@ window#waybar.hidden {
 #custom-clock {
 	padding-top: 0;
 	padding-bottom: 0;
+	margin-top: 4;
+	margin-bottom: 4;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
 	color: #1e1e2e;
 	background: #d6acff;
@@ -150,27 +223,33 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
 	color: #1e1e2e;
 	background: #fae3b0;
+	margin-top: 4;
+	margin-bottom: 4;
 }
 #custom-mem {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-top: 0;
+	margin-top: 4;
+	margin-bottom: 4;
 	padding-bottom: 0;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
 	color: #1e1e2e;
 	background: #f5c2e7;
 }
 #custom-time{
 	margin-left: 8px;
+	margin-top: 4;
+	margin-bottom: 4;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
 	color: #1e1e2e;
 	background: #fae3b0;
@@ -179,10 +258,12 @@ window#waybar.hidden {
 }
 #custom-mic{
 	margin-left: 8px;
+	margin-top: 4;
+	margin-bottom: 4;
 	color: #1e1e2e;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
 	padding-top: 0;
 	padding-bottom: 0;
@@ -192,8 +273,10 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
+	margin-top: 4;
+	margin-bottom: 4;
 	background: #9ED9CC;
 	color: #1e1e2e;
 	padding-top: 0;
@@ -202,9 +285,13 @@ window#waybar.hidden {
 #custom-cpu {
 	margin-left: 8px;
 	padding-left: 10px;
+	margin-top: 4;
+	margin-bottom: 4;
 	padding-right: 10px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
+	margin-top: 4;
+	margin-bottom: 4;
 	padding-top: 0;
 	padding-bottom: 0;
 	color: #1e1e2e;
@@ -215,8 +302,10 @@ window#waybar.hidden {
 	margin-left: 8px;
 	/* padding-left: 15px; */
 	padding-right: 15px;
-	border-radius: 15px;
+	border-radius: 13px;
 	transition: none;
+	margin-top: 4;
+	margin-bottom: 4;
 	color: #D8DEE9;
 	background: #1e1e2e;
 	padding-top: 0;

@@ -148,6 +148,9 @@ riverctl border-color-focused 0xc9cbff
 riverctl border-color-unfocused 0x414a5b
 riverctl border-width 3
 
+rivertile -view-padding 8
+rivertile -outer-padding 10
+
 # Set repeat rate
 riverctl set-repeat 100 300
 
