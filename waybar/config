@@ -1,8 +1,9 @@
 {
+    "gtk-layer-shell": false,
 	"layer": "top",
 	"modules-left": ["wlr/workspaces", "river/tags", "sway/workspaces", "sway/mode"],
 	"modules-center": [],
-	"modules-right": [ "tray", "custom/cpu","custom/mem", "custom/swap","backlight","pulseaudio", "custom/mic","custom/clock","custom/time","upower",],
+	"modules-right": [ "tray", "custom/cpu","custom/mem", "custom/swap","backlight","pulseaudio", "custom/mic","custom/clock","custom/time","battery",],
 	
     "wlr/workspaces": {
     "all-outputs": "true",
@@ -10,16 +11,11 @@
     "sort-by-false": "false",
     "sort-by-coordinates": "false",
     "on-click": "activate",
-    //"format-icons": {
-    //"1",
-    //"2",
-    //"3",
-    //"4",
-    //"5",
-    //"urgent": "",
-    //"active": "",
-    //"default": ""
-    //}
+    "format-icons": {
+    "urgent": "",
+    "active": "",
+    "default": ""
+    }
 },
 
     "sway/workspaces": {
@@ -36,9 +32,6 @@
             "8": "",
             "9": "",
             "10": "",
- //           "urgent": "",
- //           "focused": "",
- //           "default": ""
         },
     },
     "sway/mode": {
@@ -107,10 +100,10 @@
             "critical": 30
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": [" ", " ", " ", " ", " "],
+        "format-icons": ["", "", "", "", ""],
 		"interval":1
     },
 	"tray":{
